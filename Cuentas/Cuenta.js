@@ -1,4 +1,4 @@
-import { Cliente } from "./Cliente.js";
+import { Cliente } from "../Cliente.js";
 export class Cuenta 
 {
     #cliente;
@@ -7,6 +7,10 @@ export class Cuenta
     #saldo;
 
     constructor(cliente, numero, agencia, saldo) {
+        if (this.constructor == Cuenta) {
+            throw new Error('No se debe instanciar esta cuenta')
+        }
+
         this.cliente = cliente;
         this.numero = numero;
         this.agencia = agencia;
