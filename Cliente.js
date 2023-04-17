@@ -15,8 +15,4 @@ export class Cliente
     asignarClave(clave) {
         this.#clave = clave;
     }
-
-    get clave() {
-        return this.#clave
-    }
 }
